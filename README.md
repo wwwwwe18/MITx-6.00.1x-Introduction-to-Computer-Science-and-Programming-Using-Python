@@ -21,9 +21,9 @@ Problem 1 - Is the Word Guessed
 Please read the Hangman Introduction before starting this problem. We'll start by writing 3 simple functions that will help us easily code the Hangman problem. First, implement the function isWordGuessed that takes in two parameters - a string, secretWord, and a list of letters, lettersGuessed. This function returns a boolean - True if secretWord has been guessed (ie, all the letters of secretWord are in lettersGuessed) and False otherwise.
 
 Example Usage:
->>> secretWord = 'apple' 
->>> lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
->>> print(isWordGuessed(secretWord, lettersGuessed))
+secretWord = 'apple' 
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print(isWordGuessed(secretWord, lettersGuessed))
 False
 
 Problem 2 - Getting the User's Guess
@@ -31,9 +31,9 @@ Next, implement the function getGuessedWord that takes in two parameters - a str
 
 Example Usage:
 
->>> secretWord = 'apple' 
->>> lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
->>> print(getGuessedWord(secretWord, lettersGuessed))
+secretWord = 'apple' 
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print(getGuessedWord(secretWord, lettersGuessed))
 '_ pp_ e'
 
 When inserting underscores into your string, it's a good idea to add at least a space after each one, so it's clear to the user how many unguessed letters are left in the string (compare the readability of __ with _ _ ) This is called usability - it's very important, when programming, to consider the usability of your program. If users find your program difficult to understand or operate, they won't use it!
@@ -47,8 +47,8 @@ Next, implement the function getAvailableLetters that takes in one parameter - a
 
 Example Usage:
 
->>> lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
->>> print(getAvailableLetters(lettersGuessed))
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print(getAvailableLetters(lettersGuessed))
 abcdfghjlmnoqtuvwxyz
 
 Note that this function should return the letters in alphabetical order, as in the example above.
@@ -57,8 +57,8 @@ For this function, you may assume that all the letters in lettersGuessed are low
 
 Hint: You might consider using string.ascii_lowercase, which is a string comprised of all lowercase letters:
 
->>> import string
->>> print(string.ascii_lowercase)
+import string
+print(string.ascii_lowercase)
 abcdefghijklmnopqrstuvwxyz
 
 Problem 4 - The Game
